@@ -24,17 +24,19 @@ def arrayManipulation(n, queries):
         else:
             listofzeros[current_arr[1]]=listofzeros[current_arr[1]]-current_arr[2]
 
-    
+    max_value=0
     for i in range(len(listofzeros)):
         if i==0:
             pass
         else:
            listofzeros[i]=listofzeros[i]+listofzeros[i-1]
                 
+        if listofzeros[i]>max_value:
+            max_value=listofzeros[i]
        
             
     
-    return max(listofzeros)
+    return max_value
         
    
 if __name__ == '__main__':
